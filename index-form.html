@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Change made to the file to see what happens in GitHub-->
+<html lang="en">
+	<head>
+	<meta charset="UTF-8>"
+	<link rel="stylesheet" type="text/css" href="reset-form.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat|Nunito|Sigmar+One' rel='stylesheet' type='text/css'>
+		<title>DoneDeal</title>
+	<style type="text/css">
+
+		body{
+			background-color: #ffaf0d;
+			padding: 0;
+			margin: 0;
+			background: url(back.jpg);
+		}
+		
+		nav{
+			display: flex;
+			flex-direction:column;
+			font-family: Montserrat, Arial, sans-serif;
+		}
+
+		a{
+			border-bottom: 1px solid white;
+			text-align: center;
+			color: teal;
+			padding: 5px 0;
+			text-decoration: none;
+		}
+
+		#logoNav	{
+			font-size: 20px;
+			font-family: Sigmar One, Arial, sans-serif;
+		}
+		fieldset{
+			display: block;
+			width: 350px;
+			border: 1ppx solid #fff;
+			border-radius: 20px;
+			padding: 20px;
+			margin-top: 20px;
+			background-color: rgba(129, 187, 201, .2);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#loginLogo {
+			font-family: sans-serif;
+			font-size: 25px;
+		}
+		#regLogo {
+			font-family: sans-serif;
+			font-size: 25px;
+
+		}
+		label.field {
+			display: block;
+			font-family: sans-serif;
+			margin-bottom: 10px;
+			text-align: right;
+			float: left;
+
+		}
+		input {
+			width:200px;
+			border-radius: 5px;
+			padding: 6px 8px;
+			margin-bottom: 15px;
+		}
+		#submit {
+			width: 60%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media screen and (min-width: 800px){
+
+			nav{
+			width: 100%;
+			flex-direction: row;
+			font-size: 20px;
+			}
+
+			a{
+				flex:1;
+				padding: 20px 0 0 0;
+				
+			}
+
+			#logoNav{
+				padding: 0 250px 0 50px;
+				font-size: 40px
+			}
+		}
+
+		</style>
+	</head>
+	<body>
+
+		<nav>
+
+			<a id="logoNav">DoneDeal</a>
+
+			<a href="#">Home</a>
+
+			<a href="#">Buy</a>
+
+			<a href="#">Sell</a>
+
+			<a href="#">Help</a>
+
+			<a href="#">Register</a>
+			
+		</nav>
+		<section class="container">
+					
+			<form id="logForm" action="server_side_script.php" method="post">
+				<fieldset>
+					<p id="loginLogo">Login</p>
+					<p>
+						<label class="field" for="logName">User name:</label>
+						<input id="logName" type="text" name="logname" />
+					</p>
+
+					<p>
+						<label class="field" for="logpassword">Password:</label>
+						<input id="logpassword" type="password" name="logpassword" />
+					</p>
+					<input id="logsubmit" type="submit" value="submit"/>
+				</fieldset>
+			</form>					
+			<form id="regForm" action="server_side_script.php" method="post">
+				<fieldset>		
+					<p id="regLogo">Registration</p>					
+					<label class="field" for="name">Name:<label>
+					<input id="name" type="text" name="name"/>
+					<label class="field" for="userName">User Name:<label>
+					<input id="userName" type="text" name="username"/>
+					<label class="field" for="password">Password:<label>
+					<input id="password" type="password" name="password"/>
+					<label class="field" for="confPassword">Confirm:<label>
+					<input id="confPassword" type="password" name="confpassword"/>		
+					<label class="field" for="loc">Location:<label>
+					<input id="loc" type="text" name="loc"/>
+					<label class="field" for="email">E-mail:<label>
+					<input id="email" type="email" name="email"/>	
+				<input id="submit" type="submit" value="submit">
+				</fieldset>	
+			</form>	
+		</section>
+
+	</body>
+</html>
