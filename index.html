@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Change made to the file to see what happens in GitHub-->
 <html lang="en">
 	<head>
 	<meta charset="UTF-8>"
@@ -26,14 +25,95 @@
 			color: #fff;
 			padding: 5px 0;
 			text-decoration: none;
+			font-size: 20px
 		}
 
-		#logoNav	{
+		#logoNav{
 			font-size: 20px;
 			font-family: Sigmar One, Arial, sans-serif;
+
 		}
 
-		@media screen and (min-width: 800px){
+		.button	{
+			width: auto;
+			height:100px;
+			border-radius: 20px;
+			background-color: #C9383F;
+			text-align: center;
+			font-size: 60px;
+			font-family: Sigmar One, Arial, sans-serif;
+			color: #ffaf0d;
+			margin: 10px;
+		}
+
+		#logo	{
+			font-family: Sigmar One, Arial, sans-serif;
+			display:none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#register	{
+			width: 330px;
+			height:55px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #C9383F;
+			border: 2px solid black;
+			text-align: center;
+			font-size: 40px;
+			font-family: Nunito, Arial, sans-serif;
+			color: #fffb15;
+			margin-top: 50px;
+			margin-bottom: 10px;
+		}
+
+		#buy, #sell	{
+			color: #fff;
+			border: 10px solid white;
+		}
+
+		.promo{
+			display: flex;
+			justify-content: space-around;
+			margin: 50px 10px 0 10px;
+		}
+
+		img	{
+			height: 200px;
+			width: 200px;
+			border: 3px solid rgba(201,56,63,0.5);
+			margin-left: 5px;
+			margin-right: 5px
+		}
+
+		#category{
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+				color: #fff;
+				font-family: Nunito;
+		}
+
+		#p4{
+			display: none;
+		}
+			
+		#p5{
+			display: none;
+		}
+
+		#p6{
+			display: none;
+		}
+
+		#p7{
+			display: none;
+		}
+
+	
+
+		@media screen and (min-width: 900px){
 
 			nav{
 			width: 100%;
@@ -51,10 +131,115 @@
 				padding: 0 250px 0 50px;
 				font-size: 40px
 			}
+
+			.promo{
+				margin-top: 50px;
+			}
+
+			#p4{
+				display: block;
+			}
+
+			.button{
+				width: 850px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			#category{
+				width: 40%;
+			}
+
+			#register{
+				margin-top: 213px;
+			}
+
 		}
 
-		</style>
+		@media screen and (min-width: 1100px){
+			
+			#logo{
+				display: block;
+				margin: auto;
+			}
+
+			#p4{
+				display: block;
+			}
+
+			#p5{
+				display: block;
+			}
+
+			#category{
+				width: 30%;
+			}
+
+			#register{
+				margin-top: 113px;
+			}
+	
+		}
+
+		@media screen and (min-width: 1300px){
+
+
+			#p4{
+				display: block;
+			}
+
+			#p5{
+				display: block;
+			}
+
+			#category{
+				width: 25%;
+			}
+	
+		}
+
+		@media screen and (min-width: 1500px){
+
+			#p4{
+				display: block;
+			}
+			
+			#p5{
+				display: block;
+			}
+
+			#p6{
+				display: block;
+			}
+
+			#category{
+				width: 20%;
+			}
+		}
+
+		@media screen and (min-width: 1700px){
+
+			#p4{
+				display: block;
+			}
+			
+			#p5{
+				display: block;
+			}
+
+			#p6{
+				display: block;
+			}
+
+			#p7{
+				display: block;
+			}
+		}
+
+	</style>
+
 	</head>
+
 	<body>
 
 		<nav>
@@ -74,35 +259,56 @@
 		</nav>
 		<section class="container">
 
-			<div id="logo">DoneDeal
+			<div id="logo" class="button">DoneDeal	
 			</div>
-
+			
 			<div id="register">Register Now!
 			</div>
 
-			<div id="promo1">
+			
+			<div class="promo">
+				<img id="p1" src="images/vase.jpg" alt="Vase"/>
+				<img id="p2" src="images/slide.jpg" alt="Slide"/>
+				<img id="p3" src="images/painting.jpg" alt="Painting"/>
+				<img id="p4" src="images/car.jpg" alt="Car"/>
+				<img id="p5" src="images/dress.jpg" alt="Dress"/>
+				<img id="p6" src="images/house.jpg" alt="House"/>
+				<img id="p7" src="images/tennis.jpg" alt="Tennis"/>
 			</div>
 
-			<div id="promo2">
+			<div id="buy" class="button">BUY
 			</div>
 
-			<div id="promo3">
+			<div  id="category">
+				<label for="category"><strong>Items by Category</style><strong></label>
+				<select>
+					<optgroup label="Popular"></optgroup>
+						<option value="clothes">Clothes & Lifestyle</option>
+						<option value="house">House & DIY</option>
+						<option value="motor">Motor</option>			
+						<option value="propert">Property</option>
+					</optgroup>
+					<optgroup label="More"></optgroup>
+						<option value="electronics">Electronics</option>
+						<option value="holidays">Holidays & Tickets</option>
+						<option value="music">Music & Education</option>
+						<option value="toys">Toys</option>
+					</optgroup>
+				</select>
 			</div>
 
-			<div id="buy">BUY
+			<div id="sell" class="button">SELL
 			</div>
 
-			<div id="category">Items by Category
-			</div>
-
-			<div id="sell">SELL
-			</div>
+			<!-- next section not required for landing page
 
 			<div id="login">Login
 			</div>
 
 			<div id="regForm">Registration
 			</div>
+
+			-->
 			
 		</section>
 
